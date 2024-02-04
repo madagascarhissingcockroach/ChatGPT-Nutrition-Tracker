@@ -131,7 +131,7 @@ def displayTitle():
     titleFrame = ctk.CTkFrame(master = root, corner_radius=25)
     titleFrame.place(relx=0.5, rely=0.5, anchor="center")
 
-    title = ctk.CTkLabel(master = titleFrame, text = "Nutrition Tracker", font = (globalFontFamily, 60))
+    title = ctk.CTkLabel(master = titleFrame, text = "ChatGPT Nutrition Tracker", font = (globalFontFamily, 60))
     title.pack(pady = (60, 30), padx=75)
 
     startButton = ctk.CTkButton(master = titleFrame, command=menu, height=100, width=400, text="Start", font=(globalFontFamily, 50), corner_radius=25)
