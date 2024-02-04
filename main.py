@@ -450,7 +450,7 @@ def getSuggestionGPT() -> dict:
     macroInfo = ""
     for macro in ["calories", "sugar", "protein", "fat", "carbs", "fiber"]:
         macroInfo += analyzeMacroText(macro)
-    prompt = (macroInfo + "State what you can expect to happen health-wise for each macro, under 10 words each ' - macro_name': expectations. Titled 'Macros'. Options: " + str(sasFoods) + ", 3 best and 3 to avoid for this individual to help meet the guidelines (e.g. if sugar is high, say to avoid high sugar foods), around 30 words. Titled 'Nutrition Advice'. Then, give recommendations for activities, around 30 words, bullet points. Titled 'Activities Advice'.")
+    prompt = (macroInfo + "State what you can expect to happen health-wise for each macro, under 15 words each ' - macro_name': expectations. Titled 'Macros'. Options: " + str(sasFoods) + ", 3 best and 3 to avoid for this individual to help meet the guidelines (e.g. if sugar is high, say to avoid high sugar foods), around 30 words. Titled 'Nutrition Advice'. Then, give recommendations for activities, around 30 words, bullet points. Titled 'Activities Advice'.")
     response = gpt.askGPT(prompt)
 
     while response.find("*") != -1:
