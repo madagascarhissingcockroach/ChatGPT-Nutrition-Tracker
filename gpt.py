@@ -1,5 +1,5 @@
 from openai import OpenAI
-API_KEY = "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"
+API_KEY = "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"
 client = OpenAI(api_key = API_KEY)
 
 def askGPT(prompt) -> str:

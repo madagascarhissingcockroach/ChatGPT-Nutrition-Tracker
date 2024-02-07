@@ -72,11 +72,8 @@ class User:
     def setCalorieGoal(self, calorieGoal):
         self.componentGoals["calories"] = calorieGoal
         calorieRatio = self.componentGoals["calories"]/self.per2000Goals["calories"]
-        self.componentGoals["sugar"] = round(calorieRatio * self.per2000Goals["sugar"], 1)
-        self.componentGoals["protein"] = round(calorieRatio * self.per2000Goals["protein"], 1)
-        self.componentGoals["fat"] = round(calorieRatio * self.per2000Goals["fat"], 1)
-        self.componentGoals["carbs"] = round(calorieRatio * self.per2000Goals["carbs"], 1)
-        self.componentGoals["fiber"] = round(calorieRatio * self.per2000Goals["fiber"], 1)
+        for component in ["sugar", "protein", "fat", "carbs", "fiber"]:
+            self.componentGoals[component] = round(calorieRatio * self.per2000Goals[component], 1)
 
         with open('userInfo.json') as infoJson:
             storedUserInfo = json.load(infoJson)
@@ -291,7 +288,6 @@ def analysisCurrent():
     if "analysisCurrentFrame" in globals() and analysisCurrentFrame in visibleFrames:
         return
     
-    print(gptSuggestion)
     analysisCurrentFrame = ctk.CTkScrollableFrame(master=analysisFrame, corner_radius=25, width=1000, height=498)
     visibleFrames.append(analysisCurrentFrame)
 
@@ -391,16 +387,16 @@ def displayAnalysisGraph(component):
             createGraphColumn(logDict[component]/user.componentGoals[component]/1.5, len(historyLogs), i+1, buttonText, log=logDict)
 
     label150 = ctk.CTkLabel(master=analysisHistoryFrame, text = "150 %", font = (globalFontFamily, 25), wraplength=150)
-    label150.place(relx=0.02, rely=0.06)
+    label150.place(relx=0.04, rely=0.06)
 
     label100 = ctk.CTkLabel(master=analysisHistoryFrame, text = "100 %", font = (globalFontFamily, 25), wraplength=150)
-    label100.place(relx=0.01, rely=0.27)
+    label100.place(relx=0.04, rely=0.28)
 
     label50 = ctk.CTkLabel(master=analysisHistoryFrame, text = "50 %", font = (globalFontFamily, 25), wraplength=150)
-    label50.place(relx=0.02, rely=0.48)
+    label50.place(relx=0.04, rely=0.5)
 
     label0 = ctk.CTkLabel(master=analysisHistoryFrame, text = "0 %", font = (globalFontFamily, 25), wraplength=150)
-    label0.place(relx=0.025, rely=0.72)
+    label0.place(relx=0.05, rely=0.72)
     
     graphFrame.grid(column=1, row=1, padx=(150, 0), pady=(50, 0))
 

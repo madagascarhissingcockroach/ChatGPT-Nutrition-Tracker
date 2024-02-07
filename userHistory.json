@@ -1,1 +1,10 @@
-[{"calories": 2522, "sugar": 11, "protein": 144, "fat": 149, "carbs": 193, "fiber": 23, "done": false, "foodsArr": [{"name": "Chicken Quesadilla", "calories": 2200, "sugar": 10, "protein": 140, "fat": 120, "carbs": 176, "fiber": 10}, {"name": "Avocado", "calories": 322, "sugar": 1, "protein": 4, "fat": 29, "carbs": 17, "fiber": 13}, {"name": "RUBBER BANDS", "calories": 0, "sugar": 0, "protein": 0, "fat": 0, "carbs": 0, "fiber": 0}, {"name": "My dog", "calories": 0, "sugar": 0, "protein": 0, "fat": 0, "carbs": 0, "fiber": 0}], "date": "2024-02-04"}]
+[
+    {"calories": 2522, 
+    "sugar": 72, 
+    "protein": 144, 
+    "fat": 149, 
+    "carbs": 193, 
+    "fiber": 24, 
+    "done": true, 
+    "foodsArr": [], 
+    "date": "2024-01-31"}, {"calories": 2425, "sugar": 65, "protein": 120, "fat": 120, "carbs": 230, "fiber": 50, "done": true, "foodsArr": [], "date": "2024-02-01"}, {"calories": 2352, "sugar": 40, "protein": 130, "fat": 80, "carbs": 240, "fiber": 70, "done": true, "foodsArr": [], "date": "2024-02-02"}, {"calories": 2222, "sugar": 47, "protein": 85, "fat": 82, "carbs": 225, "fiber": 70, "done": true, "foodsArr": [], "date": "2024-02-03"}, {"calories": 2210, "sugar": 19.4, "protein": 89, "fat": 116, "carbs": 224, "fiber": 34, "done": true, "foodsArr": [{"name": "Chicken Egg Fried Rice", "calories": 580, "sugar": 4, "protein": 23, "fat": 19, "carbs": 84, "fiber": 3}, {"name": "Avocado", "calories": 480, "sugar": 2.4, "protein": 6, "fat": 44, "carbs": 26, "fiber": 20}, {"name": "Chicken Burrito", "calories": 860, "sugar": 8, "protein": 45, "fat": 35, "carbs": 92, "fiber": 9}, {"name": "Grilled Cheese", "calories": 290, "sugar": 5, "protein": 15, "fat": 18, "carbs": 22, "fiber": 2}], "date": "2024-02-04"}]
